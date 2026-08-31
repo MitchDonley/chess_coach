@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Chess Coach — user-specific / generated files
+config.yaml
+data/pgn_cache/
+data/analysis_cache.sqlite
+reports/
+
+# skills CLI (npx skills) lockfile — local tool state, not project config
+skills-lock.json

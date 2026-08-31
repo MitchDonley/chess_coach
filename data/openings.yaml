@@ -1,0 +1,159 @@
+# Curated opening recommendations for chess coach.
+# Add entries here to enable opening recommendations in the report.
+# Fields: id, name, color, eco, main_line, key_ideas, traps, style_tags, counters_to, lichess_study
+
+- id: london_system
+  name: London System
+  color: white
+  eco: D02
+  main_line: [d4, d5, Nf3, Nf6, Bf4, e6, e3, Be7, Bd3, O-O, O-O]
+  key_ideas:
+    - "Develop bishop to f4 before e3 — this is the move order that defines the London."
+    - "Aim for a solid pawn structure with c3 and e3, then expand with e4 when ready."
+    - "Kingside attack with Ne5, f4, and sometimes h4-h5 is the aggressive plan."
+    - "Versus ...Qb6 attacking b2, play Qb3 to trade or Nc3 to ignore it."
+  traps:
+    - name: "Pseudo-Trompowsky trap"
+      line: [d4, Nf6, Bf4, c5, e3, Qb6]
+      response: "Qb3 — trade queens or let them capture b2 after Nc3 (your development compensates)."
+  style_tags: [solid, system, low_theory]
+  counters_to: [open_games, sharp_lines]
+  lichess_study: "https://lichess.org/study/london-system"
+
+- id: kings_indian_attack
+  name: King's Indian Attack
+  color: white
+  eco: A07
+  main_line: [Nf3, d5, g3, Nf6, Bg2, e6, O-O, Be7, d3, O-O, Nbd2]
+  key_ideas:
+    - "Fianchetto the king's bishop for long-term pressure on the long diagonal."
+    - "Central plan: e4-e5 push to gain space; then f4-f5 kingside attack."
+    - "Very flexible — works against almost any Black setup with no theory memorization."
+    - "Be patient; don't rush the e4-e5 push until the position is ready."
+  traps: []
+  style_tags: [solid, positional, low_theory, flexible]
+  counters_to: [french_defense, sicilian, kings_pawn]
+  lichess_study: "https://lichess.org/study/kings-indian-attack"
+
+- id: caro_kann_advance
+  name: Caro-Kann Advance Variation
+  color: white
+  eco: B12
+  main_line: [e4, c6, d4, d5, e5, Bf5, Nf3, e6, Be2, c5, O-O]
+  key_ideas:
+    - "Grab space with e5 — Black's light-squared bishop is immediately challenged."
+    - "Develop quickly with Nf3, Be2, and castle; then pressure with c4 or g4."
+    - "After ...Bf5-g6, the h4-h5 plan is aggressive and thematic."
+    - "Avoid letting Black simplify with ...c5xd4; keep the center tense."
+  traps:
+    - name: "Short Attack"
+      line: [e4, c6, d4, d5, e5, Bf5, Nf3, e6, Be2, Nd7, O-O, Ne7, Nbd2, h6, Nb3, Qc7]
+      response: "Na5 — targeting c6 and creating queenside pressure."
+  style_tags: [aggressive, space_control]
+  counters_to: [caro_kann]
+  lichess_study: "https://lichess.org/study/caro-kann-advance"
+
+- id: sicilian_alapin
+  name: Sicilian Alapin (2.c3)
+  color: white
+  eco: B22
+  main_line: [e4, c5, c3, Nf6, e5, Nd5, Nf3, e6, d4, cxd4, cxd4]
+  key_ideas:
+    - "Avoid Sicilian theory entirely — 2.c3 leads to a solid Open-Game-like structure."
+    - "After 2...Nf6 3.e5 Nd5 4.Nf3 — develop fast and aim for d4."
+    - "After 2...d5 3.exd5 Qxd5 4.d4 — central control with easy development."
+    - "Your IQP (d4 pawn) is dynamic: use it to open files and activate pieces."
+  traps:
+    - name: "Early Nc3 pitfall"
+      line: [e4, c5, c3, d5, exd5, Qxd5, d4, Nc6, Nf3, Bg4, Be2]
+      response: "Be2 — don't play Nc3 here as Black will exchange and leave you with a weak c3 pawn."
+  style_tags: [low_theory, solid, anti_sicilian]
+  counters_to: [sicilian]
+  lichess_study: "https://lichess.org/study/sicilian-alapin"
+
+- id: queens_gambit_declined_exchange
+  name: QGD Exchange Variation
+  color: white
+  eco: D35
+  main_line: [d4, d5, c4, e6, Nc3, Nf6, cxd5, exd5, Bg5, Be7, e3, O-O, Bd3, Nbd7]
+  key_ideas:
+    - "Exchange on d5 early to create a symmetrical pawn structure with minority attack potential."
+    - "Minority attack: push b4-b5-bxc6 to create a weakness on c6."
+    - "White's pieces belong on d3 (bishop), f3 (knight), and e1-e5 (rook lift)."
+    - "Don't rush — this is a long-game structure. Control c5 square."
+  traps: []
+  style_tags: [positional, solid, strategic]
+  counters_to: [queens_gambit_declined]
+  lichess_study: "https://lichess.org/study/qgd-exchange"
+
+- id: kings_indian_defense
+  name: King's Indian Defense
+  color: black
+  eco: E60
+  main_line: [d4, Nf6, c4, g6, Nc3, Bg7, e4, d6, Nf3, O-O, Be2, e5]
+  key_ideas:
+    - "Let White have the center — your plan is to counterattack with ...e5 or ...c5."
+    - "After ...e5, the main plan is ...Nd7-f6-h5 and ...f5-f4 kingside attack."
+    - "Your dark-squared bishop on g7 is your best piece — keep it active."
+    - "The position is imbalanced: White attacks queenside, you attack kingside — race!"
+  traps:
+    - name: "Larsen Variation trap"
+      line: [d4, Nf6, c4, g6, Nc3, Bg7, e4, d6, f3, O-O, Be3, e5, d5, Nh5]
+      response: "...Nh5 — strong repositioning, threatens ...f5 and makes the knight useful."
+  style_tags: [aggressive, dynamic, complex]
+  counters_to: [queens_pawn, english]
+  lichess_study: "https://lichess.org/study/kings-indian-defense"
+
+- id: sicilian_najdorf
+  name: Sicilian Najdorf (6...a6)
+  color: black
+  eco: B90
+  main_line: [e4, c5, Nf3, d6, d4, cxd4, Nxd4, Nf6, Nc3, a6]
+  key_ideas:
+    - "...a6 prevents Nb5 and prepares ...e5 or ...b5 queenside expansion."
+    - "Against 6.Bg5: play the sharp ...e6 7.f4 Be7 8.Qf3 Qc7 Poisoned Pawn or solid ...h6."
+    - "Against 6.Be3: English Attack — castle queenside and attack with ...h5, ...g5."
+    - "The Najdorf is the most theoretically rich defense; pick ONE main-line response to 6.Bg5."
+  traps:
+    - name: "Poisoned Pawn Variation"
+      line: [e4, c5, Nf3, d6, d4, cxd4, Nxd4, Nf6, Nc3, a6, Bg5, e6, f4, Qb6]
+      response: "Only play ...Qxb2 if you know the theory deeply — it's sharp and risky in blitz."
+  style_tags: [aggressive, sharp, high_theory, dynamic]
+  counters_to: [kings_pawn]
+  lichess_study: "https://lichess.org/study/sicilian-najdorf"
+
+- id: french_defense
+  name: French Defense (3.Nc3 Nf6)
+  color: black
+  eco: C10
+  main_line: [e4, e6, d3, d5, Nd2, Nf6, Ngf3, c5, g3, Nc6, Bg2, Be7, O-O, O-O]
+  key_ideas:
+    - "Solid pawn chain with ...e6 and ...d5 — White's e4 pawn is under pressure."
+    - "Your main weakness: the light-squared bishop on c8 is often passive. Develop it early."
+    - "Counterplay comes from ...c5, attacking the d4 anchor of White's pawn chain."
+    - "Against 3.e5 (Advance): attack with ...c5-c4 and ...Qb6 queenside pressure."
+  traps:
+    - name: "Advance Variation trap"
+      line: [e4, e6, d4, d5, e5, c5, c3, Nc6, Nf3, Qb6]
+      response: "...Qb6 hits b2 and d4 — White must be careful. Best is Bd3 or a3."
+  style_tags: [solid, positional, low_theory]
+  counters_to: [kings_pawn]
+  lichess_study: "https://lichess.org/study/french-defense"
+
+- id: queens_gambit_accepted
+  name: Queen's Gambit Accepted
+  color: black
+  eco: D20
+  main_line: [d4, d5, c4, dxc4, Nf3, Nf6, e3, e6, Bxc4, c5, O-O, a6]
+  key_ideas:
+    - "Accept the gambit and hold the c4 pawn with ...b5, or give it back for development."
+    - "After ...dxc4, play ...e5 or ...c5 to challenge White's center immediately."
+    - "Your plan: equalize fast, then exploit White's temporary IQP if d4 becomes weak."
+    - "Don't try to hold the c4 pawn too long — your development matters more."
+  traps:
+    - name: "Fool's mate pattern"
+      line: [d4, d5, c4, dxc4, Nf3, b5, e3, Bb7, a4, c6, axb5, cxb5]
+      response: "White regains the pawn with active piece play — don't over-defend b5."
+  style_tags: [dynamic, practical, counter_attacking]
+  counters_to: [queens_gambit]
+  lichess_study: "https://lichess.org/study/queens-gambit-accepted"

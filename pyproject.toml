@@ -1,0 +1,28 @@
+[project]
+name = "chess-coach"
+version = "0.1.0"
+description = "Personal chess coach based on chess.com game history"
+requires-python = ">=3.12"
+dependencies = [
+    "python-chess>=1.999",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.15.18",
+]
+
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chess_coach*"]
+
+[tool.ruff]
+line-length = 100

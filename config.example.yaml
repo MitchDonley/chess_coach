@@ -1,0 +1,33 @@
+chesscom:
+  username: "your-chess-com-handle"
+  contact_email: "you@example.com"  # required — included in User-Agent per chess.com policy
+
+lookback_days: 30
+time_classes: ["blitz"]   # options: "bullet", "blitz", "rapid", "daily"
+
+stockfish:
+  path: "/opt/homebrew/bin/stockfish"  # brew install stockfish
+  threads: 4
+  hash_mb: 1024
+  depth: 10               # single-pass depth; higher = more accurate but slower
+  multipv: 2              # keep 2 to enable puzzle-worthiness PV gap check
+
+puzzles:
+  min_cp_loss: 250        # only include blunders/mistakes above this threshold
+  min_pv_gap: 150         # |eval_pv1 - eval_pv2| required (clear best move)
+  min_pv_length: 3        # best line must be at least this many plies
+  skip_book_plies: 6      # ignore mistakes in the first N half-moves (opening theory)
+  min_clock_seconds: 15   # exclude time-pressure mistakes below this clock value
+  max_per_report: 15      # max puzzles shown in the Markdown report
+
+openings:
+  recommendations_per_run: 2
+  curated_file: "data/openings.yaml"
+
+output:
+  reports_dir: "reports"
+  open_report_after_run: true  # open report.md in your default app after each run
+
+cache:
+  pgn_dir: "data/pgn_cache"
+  analysis_db: "data/analysis_cache.sqlite"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mitch.chesscoach</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/mitch/Documents/chess_coach/.venv/bin/python</string>
+        <string>-m</string>
+        <string>chess_coach</string>
+        <string>--config</string>
+        <string>/Users/mitch/Documents/chess_coach/config.yaml</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/mitch/Documents/chess_coach</string>
+
+    <!-- Run every Monday at 7:00 AM -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/mitch/Documents/chess_coach/data/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/mitch/Documents/chess_coach/data/launchd.err.log</string>
+
+    <!-- Don't run immediately on load -->
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
